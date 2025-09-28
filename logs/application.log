@@ -1,0 +1,2089 @@
+[2025-09-16 19:40:15] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 19:40:15] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 19:40:15] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 19:40:15] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 19:40:15] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 19:40:15] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 19:40:15] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:40:15] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 19:40:15] INFO JavaFX Application Thread - Таблица и контекстное меню настроены
+[2025-09-16 19:40:15] INFO JavaFX Application Thread - Фильтры настроены
+[2025-09-16 19:40:15] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 19:40:22] INFO JavaFX Application Thread - Переключение на JSON
+[2025-09-16 19:40:22] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 19:40:22] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 19:40:22] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 19:40:22] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:40:22] WARN JavaFX Application Thread - Ошибка чтения JSON файла, возврат пустого списка: Cannot construct instance of `coursework.univer.module.dao.Game` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 3] (through reference chain: java.util.ArrayList[0])
+[2025-09-16 19:40:22] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 19:40:22] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 19:40:26] INFO JavaFX Application Thread - Переключение на PostgreSQL
+[2025-09-16 19:40:26] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 19:40:26] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 19:40:26] ERROR JavaFX Application Thread - Ошибка подключения к PostgreSQL
+org.postgresql.util.PSQLException: �����: ��� ���� "game_user" ���� ��������
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2845)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:176)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:323)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at coursework.univer/coursework.univer.module.dao.PostgresGameDao.<init>(PostgresGameDao.java:17)
+	at coursework.univer/coursework.univer.module.dao.GameDaoFactory.createDao(GameDaoFactory.java:16)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:45)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToPostgres(GameController.java:109)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+[2025-09-16 19:40:26] ERROR JavaFX Application Thread - Ошибка переключения источника данных на POSTGRES
+java.lang.RuntimeException: Ошибка подключения к PostgreSQL
+	at coursework.univer/coursework.univer.module.dao.GameDaoFactory.createDao(GameDaoFactory.java:18)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:45)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToPostgres(GameController.java:109)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.postgresql.util.PSQLException: �����: ��� ���� "game_user" ���� ��������
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2845)
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:176)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:323)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at coursework.univer/coursework.univer.module.dao.PostgresGameDao.<init>(PostgresGameDao.java:17)
+	at coursework.univer/coursework.univer.module.dao.GameDaoFactory.createDao(GameDaoFactory.java:16)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:45)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToPostgres(GameController.java:109)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+[2025-09-16 19:41:00] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 19:41:00] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 19:41:00] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 19:41:00] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 19:41:00] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 19:41:00] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 19:41:00] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:41:00] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 19:41:00] INFO JavaFX Application Thread - Таблица и контекстное меню настроены
+[2025-09-16 19:41:00] INFO JavaFX Application Thread - Фильтры настроены
+[2025-09-16 19:41:00] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 19:41:02] INFO JavaFX Application Thread - Переключение на PostgreSQL
+[2025-09-16 19:41:02] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 19:41:02] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 19:41:02] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 19:41:02] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 19:41:02] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:41:02] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 19:41:05] INFO JavaFX Application Thread - Открытие диалога добавления игры
+[2025-09-16 19:41:12] INFO JavaFX Application Thread - Игра добавлена в PostgreSQL, ID: 3, название: ААА
+[2025-09-16 19:41:12] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 19:41:12] INFO JavaFX Application Thread - Игра добавлена: ААА
+[2025-09-16 19:41:16] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 19:41:20] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:41:21] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 19:41:31] INFO JavaFX Application Thread - Переключение на CSV
+[2025-09-16 19:41:31] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 19:41:31] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 19:41:31] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 19:41:31] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 19:41:31] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:41:31] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 19:41:32] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 19:41:32] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 19:41:32] DEBUG JavaFX Application Thread - Применен фильтр: Для компании (2+ игроков), записей: 1
+[2025-09-16 19:41:34] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 19:41:34] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 19:41:34] DEBUG JavaFX Application Thread - Применен фильтр: Одиночные (1 игрок), записей: 0
+[2025-09-16 19:41:36] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 19:41:36] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 19:41:36] DEBUG JavaFX Application Thread - Применен фильтр: Все игры, записей: 1
+[2025-09-16 19:41:37] INFO JavaFX Application Thread - Переключение на JSON
+[2025-09-16 19:41:37] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 19:41:37] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 19:41:37] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 19:41:37] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:41:37] WARN JavaFX Application Thread - Ошибка чтения JSON файла, возврат пустого списка: Cannot construct instance of `coursework.univer.module.dao.Game` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 3] (through reference chain: java.util.ArrayList[0])
+[2025-09-16 19:41:37] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 19:41:37] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 19:42:13] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 19:42:13] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 19:42:13] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 19:42:13] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 19:42:13] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 19:42:13] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 19:42:13] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:42:13] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 19:42:13] INFO JavaFX Application Thread - Таблица и контекстное меню настроены
+[2025-09-16 19:42:13] INFO JavaFX Application Thread - Фильтры настроены
+[2025-09-16 19:42:13] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 19:42:16] INFO JavaFX Application Thread - Переключение на JSON
+[2025-09-16 19:42:16] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 19:42:16] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 19:42:16] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 19:42:16] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:42:16] WARN JavaFX Application Thread - Ошибка чтения JSON файла, возврат пустого списка: Cannot construct instance of `coursework.univer.module.dao.Game` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 3] (through reference chain: java.util.ArrayList[0])
+[2025-09-16 19:42:16] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 19:42:16] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 19:43:01] INFO JavaFX Application Thread - Переключение на PostgreSQL
+[2025-09-16 19:43:01] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 19:43:01] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 19:43:01] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 19:43:01] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 19:43:01] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 19:43:01] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 19:43:02] INFO JavaFX Application Thread - Переключение на JSON
+[2025-09-16 19:43:02] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 19:43:02] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 19:43:02] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 19:43:02] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:43:02] WARN JavaFX Application Thread - Ошибка чтения JSON файла, возврат пустого списка: Cannot construct instance of `coursework.univer.module.dao.Game` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 3] (through reference chain: java.util.ArrayList[0])
+[2025-09-16 19:43:02] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 19:43:02] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 19:43:03] INFO JavaFX Application Thread - Открытие диалога добавления игры
+[2025-09-16 19:43:07] INFO JavaFX Application Thread - Добавление игры в JSON: ААА
+[2025-09-16 19:43:07] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:43:07] WARN JavaFX Application Thread - Ошибка чтения JSON файла, возврат пустого списка: Cannot construct instance of `coursework.univer.module.dao.Game` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 3] (through reference chain: java.util.ArrayList[0])
+[2025-09-16 19:43:07] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 1
+[2025-09-16 19:43:07] INFO JavaFX Application Thread - Игра добавлена в JSON, ID: 1, название: ААА
+[2025-09-16 19:43:07] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:43:07] WARN JavaFX Application Thread - Ошибка чтения JSON файла, возврат пустого списка: Cannot construct instance of `coursework.univer.module.dao.Game` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 3] (through reference chain: java.util.ArrayList[0])
+[2025-09-16 19:43:07] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 19:43:07] INFO JavaFX Application Thread - Игра добавлена: ААА
+[2025-09-16 19:52:36] INFO main - Логгер инициализирован
+[2025-09-16 19:52:36] INFO main - Инициализация JSON DAO, файл: games.json
+[2025-09-16 19:52:36] DEBUG main - JSON файл уже существует: games.json
+[2025-09-16 19:52:36] INFO main - Добавление игры в JSON: Тестовая игра
+[2025-09-16 19:52:36] DEBUG main - Загрузка всех игр из JSON
+[2025-09-16 19:52:36] WARN main - Ошибка чтения JSON файла: Cannot construct instance of `coursework.univer.module.dao.Game` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 3] (through reference chain: java.util.ArrayList[0])
+[2025-09-16 19:52:36] DEBUG main - Игры записаны в JSON, количество: 1
+[2025-09-16 19:52:36] INFO main - Игра добавлена в JSON, ID: 1, название: Тестовая игра
+[2025-09-16 19:52:36] DEBUG main - Загрузка всех игр из JSON
+[2025-09-16 19:52:36] WARN main - Ошибка чтения JSON файла: Cannot construct instance of `coursework.univer.module.dao.Game` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (File); line: 1, column: 3] (through reference chain: java.util.ArrayList[0])
+[2025-09-16 19:55:53] INFO main - Логгер инициализирован
+[2025-09-16 19:55:53] INFO main - Инициализация JSON DAO, файл: games.json
+[2025-09-16 19:55:54] DEBUG main - JSON файл уже существует: games.json
+[2025-09-16 19:55:54] DEBUG main - JSON файл валиден
+[2025-09-16 19:55:54] INFO main - Добавление игры в JSON: Тестовая игра
+[2025-09-16 19:55:54] DEBUG main - Загрузка всех игр из JSON
+[2025-09-16 19:55:54] DEBUG main - Загружено игр из JSON: 1
+[2025-09-16 19:55:54] DEBUG main - Игра #1: Тестовая игра (ID: 1)
+[2025-09-16 19:55:54] DEBUG main - Игры записаны в JSON, количество: 2
+[2025-09-16 19:55:54] INFO main - Игра добавлена в JSON, ID: 2, название: Тестовая игра
+[2025-09-16 19:55:54] DEBUG main - Загрузка всех игр из JSON
+[2025-09-16 19:55:54] DEBUG main - Загружено игр из JSON: 2
+[2025-09-16 19:55:54] DEBUG main - Игра #1: Тестовая игра (ID: 1)
+[2025-09-16 19:55:54] DEBUG main - Игра #2: Тестовая игра (ID: 2)
+[2025-09-16 19:58:02] INFO main - Логгер инициализирован
+[2025-09-16 19:58:02] INFO main - Инициализация JSON DAO, файл: games.json
+[2025-09-16 19:58:02] DEBUG main - JSON файл уже существует: games.json
+[2025-09-16 19:58:02] DEBUG main - JSON файл валиден
+[2025-09-16 19:58:02] INFO main - Добавление игры в JSON: Шахматы
+[2025-09-16 19:58:02] DEBUG main - Загрузка всех игр из JSON
+[2025-09-16 19:58:02] DEBUG main - Загружено игр из JSON: 2
+[2025-09-16 19:58:02] DEBUG main - Игра #1: Тестовая игра (ID: 1)
+[2025-09-16 19:58:02] DEBUG main - Игра #2: Тестовая игра (ID: 2)
+[2025-09-16 19:58:02] DEBUG main - Игры записаны в JSON, количество: 3
+[2025-09-16 19:58:02] INFO main - Игра добавлена в JSON, ID: 3, название: Шахматы
+[2025-09-16 19:58:02] INFO main - Добавление игры в JSON: Монополия
+[2025-09-16 19:58:02] DEBUG main - Загрузка всех игр из JSON
+[2025-09-16 19:58:02] DEBUG main - Загружено игр из JSON: 3
+[2025-09-16 19:58:02] DEBUG main - Игра #1: Тестовая игра (ID: 1)
+[2025-09-16 19:58:02] DEBUG main - Игра #2: Тестовая игра (ID: 2)
+[2025-09-16 19:58:02] DEBUG main - Игра #3: Шахматы (ID: 3)
+[2025-09-16 19:58:02] DEBUG main - Игры записаны в JSON, количество: 4
+[2025-09-16 19:58:02] INFO main - Игра добавлена в JSON, ID: 4, название: Монополия
+[2025-09-16 19:58:02] DEBUG main - Загрузка всех игр из JSON
+[2025-09-16 19:58:02] DEBUG main - Загружено игр из JSON: 4
+[2025-09-16 19:58:02] DEBUG main - Игра #1: Тестовая игра (ID: 1)
+[2025-09-16 19:58:02] DEBUG main - Игра #2: Тестовая игра (ID: 2)
+[2025-09-16 19:58:02] DEBUG main - Игра #3: Шахматы (ID: 3)
+[2025-09-16 19:58:02] DEBUG main - Поиск игр в JSON по запросу: стратегия
+[2025-09-16 19:58:02] DEBUG main - Загружено игр из JSON: 4
+[2025-09-16 19:58:02] DEBUG main - Найдено игр по запросу 'стратегия': 3
+[2025-09-16 19:58:12] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 19:58:12] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 19:58:12] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 19:58:12] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 19:58:12] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 19:58:12] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 19:58:12] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:58:12] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 19:58:12] INFO JavaFX Application Thread - Таблица и контекстное меню настроены
+[2025-09-16 19:58:12] INFO JavaFX Application Thread - Фильтры настроены
+[2025-09-16 19:58:12] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 19:58:14] INFO JavaFX Application Thread - Переключение на JSON
+[2025-09-16 19:58:14] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 19:58:14] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 19:58:14] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 19:58:14] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 19:58:14] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:58:14] DEBUG JavaFX Application Thread - Загружено игр из JSON: 4
+[2025-09-16 19:58:14] DEBUG JavaFX Application Thread - Игра #1: Тестовая игра (ID: 1)
+[2025-09-16 19:58:14] DEBUG JavaFX Application Thread - Игра #2: Тестовая игра (ID: 2)
+[2025-09-16 19:58:14] DEBUG JavaFX Application Thread - Игра #3: Шахматы (ID: 3)
+[2025-09-16 19:58:14] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 4
+[2025-09-16 19:58:14] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 19:58:17] INFO JavaFX Application Thread - Переключение на PostgreSQL
+[2025-09-16 19:58:17] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 19:58:17] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 19:58:17] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 19:58:17] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 19:58:17] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 19:58:17] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 19:58:19] INFO JavaFX Application Thread - Открытие диалога добавления игры
+[2025-09-16 19:58:22] INFO JavaFX Application Thread - Игра добавлена в PostgreSQL, ID: 4, название: 222
+[2025-09-16 19:58:22] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:58:22] INFO JavaFX Application Thread - Игра добавлена: 222
+[2025-09-16 19:58:25] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 19:58:27] INFO JavaFX Application Thread - Переключение на JSON
+[2025-09-16 19:58:27] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 19:58:27] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 19:58:27] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 19:58:27] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 19:58:27] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:58:27] DEBUG JavaFX Application Thread - Загружено игр из JSON: 4
+[2025-09-16 19:58:27] DEBUG JavaFX Application Thread - Игра #1: Тестовая игра (ID: 1)
+[2025-09-16 19:58:27] DEBUG JavaFX Application Thread - Игра #2: Тестовая игра (ID: 2)
+[2025-09-16 19:58:27] DEBUG JavaFX Application Thread - Игра #3: Шахматы (ID: 3)
+[2025-09-16 19:58:27] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 4
+[2025-09-16 19:58:27] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 19:58:30] INFO JavaFX Application Thread - Обновление игры в JSON, ID: 1, название: Тестовая игра
+[2025-09-16 19:58:30] DEBUG JavaFX Application Thread - Загружено игр из JSON: 4
+[2025-09-16 19:58:30] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 4
+[2025-09-16 19:58:30] INFO JavaFX Application Thread - Игра обновлена в JSON, ID: 1
+[2025-09-16 19:58:30] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:58:30] DEBUG JavaFX Application Thread - Загружено игр из JSON: 4
+[2025-09-16 19:58:30] DEBUG JavaFX Application Thread - Игра #1: Тестовая игра (ID: 1)
+[2025-09-16 19:58:30] DEBUG JavaFX Application Thread - Игра #2: Тестовая игра (ID: 2)
+[2025-09-16 19:58:30] DEBUG JavaFX Application Thread - Игра #3: Шахматы (ID: 3)
+[2025-09-16 19:58:30] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 4
+[2025-09-16 19:58:32] INFO JavaFX Application Thread - Удаление игры из JSON, ID: 1
+[2025-09-16 19:58:32] DEBUG JavaFX Application Thread - Загружено игр из JSON: 4
+[2025-09-16 19:58:32] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 3
+[2025-09-16 19:58:32] INFO JavaFX Application Thread - Игра удалена из JSON, ID: 1
+[2025-09-16 19:58:32] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:58:32] DEBUG JavaFX Application Thread - Загружено игр из JSON: 3
+[2025-09-16 19:58:32] DEBUG JavaFX Application Thread - Игра #1: Тестовая игра (ID: 2)
+[2025-09-16 19:58:32] DEBUG JavaFX Application Thread - Игра #2: Шахматы (ID: 3)
+[2025-09-16 19:58:32] DEBUG JavaFX Application Thread - Игра #3: Монополия (ID: 4)
+[2025-09-16 19:58:32] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 3
+[2025-09-16 19:58:33] INFO JavaFX Application Thread - Удаление игры из JSON, ID: 2
+[2025-09-16 19:58:33] DEBUG JavaFX Application Thread - Загружено игр из JSON: 3
+[2025-09-16 19:58:33] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 2
+[2025-09-16 19:58:33] INFO JavaFX Application Thread - Игра удалена из JSON, ID: 2
+[2025-09-16 19:58:33] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:58:33] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 19:58:33] DEBUG JavaFX Application Thread - Игра #1: Шахматы (ID: 3)
+[2025-09-16 19:58:33] DEBUG JavaFX Application Thread - Игра #2: Монополия (ID: 4)
+[2025-09-16 19:58:33] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 19:58:34] INFO JavaFX Application Thread - Удаление игры из JSON, ID: 3
+[2025-09-16 19:58:34] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 19:58:34] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 1
+[2025-09-16 19:58:34] INFO JavaFX Application Thread - Игра удалена из JSON, ID: 3
+[2025-09-16 19:58:34] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 19:58:34] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 19:58:34] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 19:58:34] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:58:36] INFO JavaFX Application Thread - Переключение на CSV
+[2025-09-16 19:58:36] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 19:58:36] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 19:58:36] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 19:58:36] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 19:58:36] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 19:58:36] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:04:03] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 20:04:03] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 20:04:03] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:04:03] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:04:03] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:04:03] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:04:03] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:04:03] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:04:03] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 20:04:16] INFO JavaFX Application Thread - Добавление игры в CSV: FFF
+[2025-09-16 20:04:16] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:04:16] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:04:16] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 2
+[2025-09-16 20:04:16] INFO JavaFX Application Thread - Игра добавлена в CSV, ID: 2, название: FFF
+[2025-09-16 20:04:16] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:04:16] DEBUG JavaFX Application Thread - Загружено игр из CSV: 2
+[2025-09-16 20:04:16] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:04:16] INFO JavaFX Application Thread - Игра добавлена: FFF
+[2025-09-16 20:04:20] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 2, название: FFF
+[2025-09-16 20:04:20] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:04:20] DEBUG JavaFX Application Thread - Загружено игр из CSV: 2
+[2025-09-16 20:04:20] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 2
+[2025-09-16 20:04:20] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 2
+[2025-09-16 20:04:20] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:04:20] DEBUG JavaFX Application Thread - Загружено игр из CSV: 2
+[2025-09-16 20:04:20] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:04:22] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 20:04:22] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 20:04:23] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 20:04:23] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 20:04:23] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:04:23] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:04:23] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:04:23] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:04:23] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 20:04:30] INFO JavaFX Application Thread - Добавление игры в JSON: UUU
+[2025-09-16 20:04:30] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:04:30] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:04:30] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:04:30] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 2
+[2025-09-16 20:04:30] INFO JavaFX Application Thread - Игра добавлена в JSON, ID: 5, название: UUU
+[2025-09-16 20:04:30] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:04:30] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:04:30] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:04:30] DEBUG JavaFX Application Thread - Игра #2: UUU (ID: 5)
+[2025-09-16 20:04:30] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:04:30] INFO JavaFX Application Thread - Игра добавлена: UUU
+[2025-09-16 20:04:34] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 20:04:34] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 20:04:34] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 20:04:34] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 20:04:34] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:04:34] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 20:04:39] INFO JavaFX Application Thread - Игра добавлена в PostgreSQL, ID: 5, название: FFF
+[2025-09-16 20:04:39] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:04:39] INFO JavaFX Application Thread - Игра добавлена: FFF
+[2025-09-16 20:04:42] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:04:43] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 20:04:43] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 20:04:43] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 20:04:43] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 20:04:43] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:04:43] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:04:43] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:04:43] DEBUG JavaFX Application Thread - Игра #2: UUU (ID: 5)
+[2025-09-16 20:04:43] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:04:43] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 20:04:47] INFO JavaFX Application Thread - Обновление игры в JSON, ID: 5, название: UUU
+[2025-09-16 20:04:47] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:04:47] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 2
+[2025-09-16 20:04:47] INFO JavaFX Application Thread - Игра обновлена в JSON, ID: 5
+[2025-09-16 20:04:47] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:04:47] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:04:47] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:04:47] DEBUG JavaFX Application Thread - Игра #2: UUU (ID: 5)
+[2025-09-16 20:04:47] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:04:48] INFO JavaFX Application Thread - Удаление игры из JSON, ID: 5
+[2025-09-16 20:04:48] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:04:48] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 1
+[2025-09-16 20:04:48] INFO JavaFX Application Thread - Игра удалена из JSON, ID: 5
+[2025-09-16 20:04:48] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:04:48] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:04:48] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:04:48] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:04:49] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 20:04:49] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 20:04:49] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 20:04:49] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 20:04:49] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:04:49] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 20:04:50] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:04:51] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:04:51] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:04:51] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:04:51] DEBUG JavaFX Application Thread - Загружено игр из CSV: 2
+[2025-09-16 20:04:51] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:04:51] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:04:56] INFO JavaFX Application Thread - Удаление игры из CSV, ID: 2
+[2025-09-16 20:04:56] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:04:56] DEBUG JavaFX Application Thread - Загружено игр из CSV: 2
+[2025-09-16 20:04:56] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-16 20:04:56] INFO JavaFX Application Thread - Игра удалена из CSV, ID: 2
+[2025-09-16 20:04:56] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:04:56] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:04:56] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:05:33] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 20:05:33] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 20:05:33] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:05:33] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:05:33] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:05:33] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:05:33] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:05:33] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:05:33] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 20:06:44] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 1, название: Дота 2
+[2025-09-16 20:06:44] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:06:44] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:06:44] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-16 20:06:44] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 1
+[2025-09-16 20:06:44] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:06:44] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:06:44] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:06:44] INFO JavaFX Application Thread - Сессия запланирована: Дота 2
+[2025-09-16 20:25:42] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 20:25:42] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 20:25:42] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:25:42] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:25:42] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:25:42] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:25:42] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:25:42] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:25:42] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 20:25:45] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 20:25:45] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 20:25:45] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 20:25:45] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 20:25:45] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:25:45] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:25:45] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:25:45] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:25:45] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 20:25:50] INFO JavaFX Application Thread - Обновление игры в JSON, ID: 4, название: Монополия
+[2025-09-16 20:25:50] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:25:50] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 1
+[2025-09-16 20:25:50] INFO JavaFX Application Thread - Игра обновлена в JSON, ID: 4
+[2025-09-16 20:25:50] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:25:50] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:25:50] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:25:50] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:25:50] INFO JavaFX Application Thread - Сессия запланирована: Монополия на 2025-09-17
+[2025-09-16 20:26:05] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:26:05] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:26:05] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:26:05] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:26:05] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:26:05] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:26:07] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 20:26:07] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 20:26:08] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 20:26:08] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 20:26:08] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:26:08] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 20:26:09] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:26:09] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:26:09] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:26:09] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:26:09] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:26:09] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:26:09] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:26:09] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:26:09] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:26:09] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:35:20] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 20:35:20] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 20:35:20] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:35:20] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:35:20] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:35:20] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:35:20] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:35:20] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:35:20] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 20:35:23] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 20:35:23] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 20:35:23] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 20:35:23] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 20:35:23] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:35:23] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:35:23] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:35:23] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:35:23] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 20:35:26] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:35:26] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:35:26] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:35:26] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:35:26] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:35:26] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:35:27] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:35:27] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:35:27] DEBUG JavaFX Application Thread - Применен фильтр: Одиночные (1 игрок), записей: 0
+[2025-09-16 20:35:28] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:35:28] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:35:28] DEBUG JavaFX Application Thread - Применен фильтр: Все игры, записей: 1
+[2025-09-16 20:35:29] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:35:29] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:35:29] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:35:29] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:36:11] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 20:36:11] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 20:36:11] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:36:11] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:36:11] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:36:11] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:36:11] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:36:11] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:36:11] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 20:36:16] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 20:36:16] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 20:36:16] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 20:36:16] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 20:36:16] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:16] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:36:16] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:16] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:36:16] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 20:36:24] INFO JavaFX Application Thread - Добавление игры в JSON: SSS
+[2025-09-16 20:36:24] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:24] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:36:24] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:24] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 2
+[2025-09-16 20:36:24] INFO JavaFX Application Thread - Игра добавлена в JSON, ID: 5, название: SSS
+[2025-09-16 20:36:24] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:24] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:24] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:24] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:24] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:36:24] INFO JavaFX Application Thread - Игра добавлена: SSS
+[2025-09-16 20:36:26] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:26] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:26] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:26] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:26] DEBUG JavaFX Application Thread - Применен фильтр: Одиночные (1 игрок), записей: 1
+[2025-09-16 20:36:28] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:28] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:28] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:28] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:28] DEBUG JavaFX Application Thread - Применен фильтр: Для компании (2+ игроков), записей: 1
+[2025-09-16 20:36:29] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:29] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:29] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:29] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:29] DEBUG JavaFX Application Thread - Применен фильтр: Все игры, записей: 2
+[2025-09-16 20:36:30] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:30] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:30] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:30] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:32] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:32] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:32] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:32] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:34] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:34] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:34] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:34] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:36] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:36] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:36] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:36] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:37] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:37] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:37] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:37] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:39] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:36:39] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:36:39] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:36:39] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:36:47] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:36:47] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:36:47] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:36:47] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:36:47] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:36:47] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:37:09] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 20:37:09] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 20:37:09] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 20:37:09] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 20:37:09] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:37:09] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:37:09] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:37:09] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:37:09] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:37:09] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 20:49:25] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 20:49:25] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 20:49:25] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:49:25] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:49:25] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:49:25] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:49:25] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:49:25] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:49:25] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 20:49:33] INFO JavaFX Application Thread - Добавление игры в CSV: FFF
+[2025-09-16 20:49:33] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:49:33] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:49:33] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 2
+[2025-09-16 20:49:33] INFO JavaFX Application Thread - Игра добавлена в CSV, ID: 2, название: FFF
+[2025-09-16 20:49:33] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:49:33] DEBUG JavaFX Application Thread - Загружено игр из CSV: 2
+[2025-09-16 20:49:33] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:49:33] INFO JavaFX Application Thread - Игра добавлена: FFF
+[2025-09-16 20:49:36] INFO JavaFX Application Thread - Удаление игры из CSV, ID: 2
+[2025-09-16 20:49:36] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:49:36] DEBUG JavaFX Application Thread - Загружено игр из CSV: 2
+[2025-09-16 20:49:36] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-16 20:49:36] INFO JavaFX Application Thread - Игра удалена из CSV, ID: 2
+[2025-09-16 20:49:36] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:49:36] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:49:36] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:49:38] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:49:38] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:49:38] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:49:38] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:49:38] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:49:38] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:49:39] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:49:39] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:49:39] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:49:39] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:49:39] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:49:39] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:49:40] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 20:49:40] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 20:49:40] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 20:49:40] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 20:49:40] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:49:40] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:49:40] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:49:40] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:49:40] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:49:40] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 20:49:46] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 20:49:46] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 20:49:46] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 20:49:46] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 20:49:46] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:49:46] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 20:49:52] INFO JavaFX Application Thread - Игра добавлена в PostgreSQL, ID: 6, название: SSS
+[2025-09-16 20:49:52] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:49:52] INFO JavaFX Application Thread - Игра добавлена: SSS
+[2025-09-16 20:50:00] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:00] INFO JavaFX Application Thread - Сессия запланирована: SSS на 2025-09-16
+[2025-09-16 20:50:05] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:05] INFO JavaFX Application Thread - Сессия запланирована: SSS на 2025-09-17
+[2025-09-16 20:50:09] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:09] INFO JavaFX Application Thread - Сессия запланирована: SSS на 2025-09-16
+[2025-09-16 20:50:15] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:15] INFO JavaFX Application Thread - Сессия запланирована: SSS на 2025-09-19
+[2025-09-16 20:50:18] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 20:50:18] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 20:50:18] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 20:50:18] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 20:50:18] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:50:18] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:50:18] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:50:18] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:50:18] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:50:18] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 20:50:22] INFO JavaFX Application Thread - Обновление игры в JSON, ID: 5, название: SSS
+[2025-09-16 20:50:22] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:50:22] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 2
+[2025-09-16 20:50:22] INFO JavaFX Application Thread - Игра обновлена в JSON, ID: 5
+[2025-09-16 20:50:22] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:50:22] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:50:22] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:50:22] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:50:22] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:50:22] INFO JavaFX Application Thread - Сессия запланирована: SSS на 2025-09-16
+[2025-09-16 20:50:24] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:50:24] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:50:24] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:50:24] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:50:24] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:24] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:50:28] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 1, название: Дота 2
+[2025-09-16 20:50:28] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:50:28] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:50:28] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-16 20:50:28] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 1
+[2025-09-16 20:50:28] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:50:28] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:50:28] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:28] INFO JavaFX Application Thread - Сессия запланирована: Дота 2 на 2025-09-19
+[2025-09-16 20:50:41] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 20:50:41] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 20:50:41] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 20:50:41] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 20:50:41] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:41] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 20:50:42] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:50:42] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:50:42] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:50:42] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:50:42] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:42] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:50:46] INFO JavaFX Application Thread - Удаление игры из CSV, ID: 1
+[2025-09-16 20:50:46] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:50:46] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:50:46] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 0
+[2025-09-16 20:50:46] INFO JavaFX Application Thread - Игра удалена из CSV, ID: 1
+[2025-09-16 20:50:46] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:50:46] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 20:50:46] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:50:47] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 20:50:47] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 20:50:47] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 20:50:47] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 20:50:47] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:50:47] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:50:47] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:50:47] DEBUG JavaFX Application Thread - Игра #2: SSS (ID: 5)
+[2025-09-16 20:50:47] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 2
+[2025-09-16 20:50:47] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 20:50:50] INFO JavaFX Application Thread - Удаление игры из JSON, ID: 5
+[2025-09-16 20:50:50] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-16 20:50:50] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 1
+[2025-09-16 20:50:50] INFO JavaFX Application Thread - Игра удалена из JSON, ID: 5
+[2025-09-16 20:50:50] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:50:50] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:50:50] DEBUG JavaFX Application Thread - Игра #1: Монополия (ID: 4)
+[2025-09-16 20:50:50] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:52] INFO JavaFX Application Thread - Удаление игры из JSON, ID: 4
+[2025-09-16 20:50:52] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-16 20:50:52] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 0
+[2025-09-16 20:50:52] INFO JavaFX Application Thread - Игра удалена из JSON, ID: 4
+[2025-09-16 20:50:52] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 20:50:52] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-16 20:50:52] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:50:53] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 20:50:53] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 20:50:53] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 20:50:53] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 20:50:53] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:50:53] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 20:50:55] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:50:56] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:50:56] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:50:56] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:50:56] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 20:50:56] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:50:56] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:51:41] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 20:51:41] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 20:51:41] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:51:41] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:51:41] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:51:41] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 20:51:41] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:51:41] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 20:51:41] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 20:51:49] INFO JavaFX Application Thread - Добавление игры в CSV: AAA
+[2025-09-16 20:51:49] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:51:49] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 20:51:49] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-16 20:51:49] INFO JavaFX Application Thread - Игра добавлена в CSV, ID: 1, название: AAA
+[2025-09-16 20:51:49] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:51:49] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:51:49] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:51:49] INFO JavaFX Application Thread - Игра добавлена: AAA
+[2025-09-16 20:51:52] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 1, название: AAA
+[2025-09-16 20:51:52] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:51:52] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:51:53] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-16 20:51:53] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 1
+[2025-09-16 20:51:53] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:51:53] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:51:53] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:51:53] INFO JavaFX Application Thread - Сессия запланирована: AAA на 2025-09-16
+[2025-09-16 20:51:57] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 20:51:57] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 20:51:58] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 20:51:58] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 20:51:58] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 20:51:58] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 20:52:02] INFO JavaFX Application Thread - Игра добавлена в PostgreSQL, ID: 7, название: FDF
+[2025-09-16 20:52:02] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:52:02] INFO JavaFX Application Thread - Игра добавлена: FDF
+[2025-09-16 20:52:06] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:52:06] INFO JavaFX Application Thread - Сессия запланирована: FDF на 2025-09-16
+[2025-09-16 20:52:10] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:52:10] INFO JavaFX Application Thread - Сессия запланирована: FDF на 2025-09-16
+[2025-09-16 20:52:13] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 20:52:13] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 20:52:13] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 20:52:13] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 20:52:13] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 20:52:13] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:00:27] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:00:27] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:00:27] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:00:27] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:00:27] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:00:27] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:00:27] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:00:27] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:00:27] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:00:38] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 1, название: ВВВ
+[2025-09-16 21:00:38] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:00:38] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:00:38] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-16 21:00:38] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 1
+[2025-09-16 21:00:38] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:00:38] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:00:38] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:05:06] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:05:06] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:05:06] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:05:06] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:05:06] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:05:06] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:05:06] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:05:06] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:05:06] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:05:10] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 21:05:10] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 21:05:10] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 21:05:10] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 21:05:10] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:05:10] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 21:05:13] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:05:13] INFO JavaFX Application Thread - Сессия запланирована: FDF на 2025-09-16
+[2025-09-16 21:11:31] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:11:31] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:11:31] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:11:31] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:11:31] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:11:31] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:11:31] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:11:31] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:11:31] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:11:37] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 21:11:37] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 21:11:37] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 21:11:37] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 21:11:37] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:11:37] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 21:11:43] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 21:11:43] INFO JavaFX Application Thread - Игра удалена: FDF
+[2025-09-16 21:11:50] INFO JavaFX Application Thread - Игра добавлена в PostgreSQL, ID: 8, название: ааа
+[2025-09-16 21:11:50] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:11:50] INFO JavaFX Application Thread - Игра добавлена: ааа
+[2025-09-16 21:11:52] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:11:52] INFO JavaFX Application Thread - Сессия запланирована: ааа на 2025-09-16
+[2025-09-16 21:13:36] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:13:36] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:13:36] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:13:36] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:13:36] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:13:36] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:13:36] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:13:36] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:13:36] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:16:44] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:16:44] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:16:44] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:16:44] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:16:44] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:16:44] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:16:44] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:16:44] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:16:44] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:17:13] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:17:13] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:17:13] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:17:13] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:17:13] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:17:13] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:17:13] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:17:13] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:17:13] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:20:33] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:20:33] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:20:33] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:20:33] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:20:33] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:20:33] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:20:33] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:20:33] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:20:33] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:20:38] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 1, название: ВВВ
+[2025-09-16 21:20:38] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:20:38] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:20:38] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-16 21:20:38] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 1
+[2025-09-16 21:20:38] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:20:38] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:20:38] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:20:38] INFO JavaFX Application Thread - Сессия запланирована: ВВВ на 2025-09-18
+[2025-09-16 21:21:27] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:21:27] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:21:27] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:21:27] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:21:27] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:21:27] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:21:27] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:21:27] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:21:27] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:21:35] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 1, название: ВВВ
+[2025-09-16 21:21:35] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:21:35] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:21:35] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-16 21:21:35] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 1
+[2025-09-16 21:21:35] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:21:35] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:21:35] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:21:37] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 21:21:37] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 21:21:37] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 21:21:37] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 21:21:37] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:21:37] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 21:21:40] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:21:40] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:21:40] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:21:40] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:21:40] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:21:40] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:21:44] INFO JavaFX Application Thread - Удаление игры из CSV, ID: 1
+[2025-09-16 21:21:44] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:21:44] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-16 21:21:44] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 0
+[2025-09-16 21:21:44] INFO JavaFX Application Thread - Игра удалена из CSV, ID: 1
+[2025-09-16 21:21:44] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:21:44] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:21:44] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 21:21:44] INFO JavaFX Application Thread - Игра удалена: ВВВ
+[2025-09-16 21:25:05] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:25:05] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:25:05] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:25:06] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:25:06] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:25:06] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:25:06] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 21:25:06] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:25:06] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:25:24] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 21:25:24] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 21:25:24] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 21:25:24] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 21:25:24] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 21:25:24] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-16 21:25:24] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 21:25:24] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 21:25:25] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 21:25:25] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 21:25:26] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 21:25:26] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 21:25:26] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:25:26] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 21:26:07] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:26:07] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:26:07] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:26:07] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:26:07] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:26:07] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:26:07] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 21:26:07] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:26:07] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:26:09] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 21:26:09] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 21:26:09] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 21:26:09] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 21:26:09] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 21:26:09] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-16 21:26:09] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 0
+[2025-09-16 21:26:09] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 21:26:12] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 21:26:12] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 21:26:13] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 21:26:13] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 21:26:13] DEBUG JavaFX Application Thread - Таблица обновлена, записей: 1
+[2025-09-16 21:26:13] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 21:36:05] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:36:05] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:36:05] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:36:05] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:36:05] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:36:05] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:36:05] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:36:05] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:36:13] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 21:36:13] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 21:36:13] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 21:36:13] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 21:36:13] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 21:36:13] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-16 21:36:13] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 21:36:15] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 21:36:15] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 21:36:15] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 21:36:15] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 21:36:15] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 21:36:35] INFO JavaFX Application Thread - Сессия запланирована: ааа на 2025-09-16
+[2025-09-16 21:36:44] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:36:44] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:36:44] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:36:44] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:36:44] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:38:33] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:38:33] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:38:33] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:38:33] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:38:33] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:38:33] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:38:33] ERROR JavaFX Application Thread - Ошибка переключения источника данных
+java.lang.NullPointerException: Cannot invoke "javafx.scene.control.Label.setText(String)" because "this.statusLabel" is null
+	at coursework.univer/coursework.univer.main.GameController.updateStatus(GameController.java:106)
+	at coursework.univer/coursework.univer.main.GameController.refreshTable(GameController.java:117)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:84)
+	at coursework.univer/coursework.univer.main.GameController.initialize(GameController.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at coursework.univer/coursework.univer.main.MainApplication.start(MainApplication.java:15)
+	at javafx.graphics@21.0.6/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
+	at javafx.graphics@21.0.6/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
+	at javafx.graphics@21.0.6/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+[2025-09-16 21:38:39] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:38:46] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:38:46] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:38:46] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:38:46] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:38:46] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:38:46] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:38:46] ERROR JavaFX Application Thread - Ошибка переключения источника данных
+java.lang.NullPointerException: Cannot invoke "javafx.scene.control.Label.setText(String)" because "this.statusLabel" is null
+	at coursework.univer/coursework.univer.main.GameController.updateStatus(GameController.java:106)
+	at coursework.univer/coursework.univer.main.GameController.refreshTable(GameController.java:117)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:84)
+	at coursework.univer/coursework.univer.main.GameController.initialize(GameController.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2688)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at coursework.univer/coursework.univer.main.MainApplication.start(MainApplication.java:15)
+	at javafx.graphics@21.0.6/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
+	at javafx.graphics@21.0.6/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
+	at javafx.graphics@21.0.6/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+[2025-09-16 21:38:52] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:38:54] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:38:54] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:38:54] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:38:54] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:38:54] ERROR JavaFX Application Thread - Ошибка переключения источника данных
+java.lang.NullPointerException: Cannot invoke "javafx.scene.control.Label.setText(String)" because "this.statusLabel" is null
+	at coursework.univer/coursework.univer.main.GameController.updateStatus(GameController.java:106)
+	at coursework.univer/coursework.univer.main.GameController.refreshTable(GameController.java:117)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:84)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToCSV(GameController.java:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+[2025-09-16 21:38:57] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 21:38:57] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 21:38:57] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 21:38:57] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 21:38:57] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 21:38:57] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-16 21:38:57] ERROR JavaFX Application Thread - Ошибка переключения источника данных
+java.lang.NullPointerException: Cannot invoke "javafx.scene.control.Label.setText(String)" because "this.statusLabel" is null
+	at coursework.univer/coursework.univer.main.GameController.updateStatus(GameController.java:106)
+	at coursework.univer/coursework.univer.main.GameController.refreshTable(GameController.java:117)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:84)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToJson(GameController.java:130)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+[2025-09-16 21:39:03] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 21:39:03] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-16 21:39:03] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 21:39:03] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-16 21:43:51] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-16 21:43:51] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-16 21:43:51] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:43:51] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:43:51] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:43:51] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:43:51] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:43:51] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-16 21:43:55] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-16 21:43:55] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-16 21:43:56] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-16 21:43:56] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-16 21:43:56] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-16 21:43:56] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-16 21:43:56] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-16 21:43:57] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 21:43:57] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 21:43:57] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 21:43:57] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 21:43:57] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 21:44:12] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-16 21:44:12] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-16 21:44:12] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:44:12] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:44:12] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-16 21:44:13] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:44:13] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:44:13] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-16 21:44:13] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-16 21:44:16] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-16 21:44:16] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-16 21:44:16] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-16 21:44:16] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-16 21:44:16] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-16 21:44:43] DEBUG JavaFX Application Thread - Применен фильтр: Одиночные (1 игрок), записей: 1
+[2025-09-16 21:44:44] DEBUG JavaFX Application Thread - Применен фильтр: Для компании (2+ игроков), записей: 0
+[2025-09-16 21:44:45] DEBUG JavaFX Application Thread - Применен фильтр: Все игры, записей: 1
+[2025-09-16 21:44:50] INFO JavaFX Application Thread - Игра удалена: ааа
+[2025-09-18 21:27:37] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-18 21:27:37] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-18 21:27:37] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-18 21:27:38] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-18 21:27:38] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:27:38] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-18 21:27:38] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-18 21:27:38] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-18 21:27:44] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-18 21:27:44] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-18 21:27:44] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:27:44] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-18 21:27:44] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-18 21:28:22] INFO JavaFX Application Thread - Добавление игры в CSV: The Witcher 3
+[2025-09-18 21:28:22] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:28:22] DEBUG JavaFX Application Thread - Загружено игр из CSV: 0
+[2025-09-18 21:28:22] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 1
+[2025-09-18 21:28:22] INFO JavaFX Application Thread - Игра добавлена в CSV, ID: 1, название: The Witcher 3
+[2025-09-18 21:28:22] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:28:22] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-18 21:28:22] INFO JavaFX Application Thread - Игра добавлена: The Witcher 3
+[2025-09-18 21:29:08] INFO JavaFX Application Thread - Добавление игры в CSV: It Takes 2
+[2025-09-18 21:29:08] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:29:08] DEBUG JavaFX Application Thread - Загружено игр из CSV: 1
+[2025-09-18 21:29:08] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 2
+[2025-09-18 21:29:08] INFO JavaFX Application Thread - Игра добавлена в CSV, ID: 2, название: It Takes 2
+[2025-09-18 21:29:08] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:29:08] DEBUG JavaFX Application Thread - Загружено игр из CSV: 2
+[2025-09-18 21:29:08] INFO JavaFX Application Thread - Игра добавлена: It Takes 2
+[2025-09-18 21:30:12] INFO JavaFX Application Thread - Добавление игры в CSV: Among US
+[2025-09-18 21:30:12] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:30:12] DEBUG JavaFX Application Thread - Загружено игр из CSV: 2
+[2025-09-18 21:30:12] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 3
+[2025-09-18 21:30:12] INFO JavaFX Application Thread - Игра добавлена в CSV, ID: 3, название: Among US
+[2025-09-18 21:30:12] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:30:12] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:30:12] INFO JavaFX Application Thread - Игра добавлена: Among US
+[2025-09-18 21:30:14] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:30:14] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:30:16] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:30:16] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:30:17] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:30:17] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:30:23] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-18 21:30:23] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-18 21:30:23] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-18 21:30:23] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-18 21:30:23] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:30:23] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-18 21:30:23] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-18 21:30:38] INFO JavaFX Application Thread - Добавление игры в JSON: Among Us
+[2025-09-18 21:30:38] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:30:38] DEBUG JavaFX Application Thread - Загружено игр из JSON: 0
+[2025-09-18 21:30:38] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 1
+[2025-09-18 21:30:38] INFO JavaFX Application Thread - Игра добавлена в JSON, ID: 1, название: Among Us
+[2025-09-18 21:30:38] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:30:38] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-18 21:30:38] DEBUG JavaFX Application Thread - Игра #1: Among Us (ID: 1)
+[2025-09-18 21:30:38] INFO JavaFX Application Thread - Игра добавлена: Among Us
+[2025-09-18 21:32:21] INFO JavaFX Application Thread - Добавление игры в JSON: Stardew Valley
+[2025-09-18 21:32:21] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:32:21] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-18 21:32:21] DEBUG JavaFX Application Thread - Игра #1: Among Us (ID: 1)
+[2025-09-18 21:32:21] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 2
+[2025-09-18 21:32:21] INFO JavaFX Application Thread - Игра добавлена в JSON, ID: 2, название: Stardew Valley
+[2025-09-18 21:32:21] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:32:21] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-18 21:32:21] DEBUG JavaFX Application Thread - Игра #1: Among Us (ID: 1)
+[2025-09-18 21:32:21] DEBUG JavaFX Application Thread - Игра #2: Stardew Valley (ID: 2)
+[2025-09-18 21:32:21] INFO JavaFX Application Thread - Игра добавлена: Stardew Valley
+[2025-09-18 21:32:22] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-18 21:32:22] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-18 21:32:22] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-18 21:32:22] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-18 21:32:22] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:32:22] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-18 21:32:22] DEBUG JavaFX Application Thread - Игра #1: Among Us (ID: 1)
+[2025-09-18 21:32:22] DEBUG JavaFX Application Thread - Игра #2: Stardew Valley (ID: 2)
+[2025-09-18 21:32:22] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-18 21:32:26] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-18 21:32:26] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-18 21:32:26] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-18 21:32:26] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-18 21:32:26] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:32:26] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-18 21:32:26] DEBUG JavaFX Application Thread - Игра #1: Among Us (ID: 1)
+[2025-09-18 21:32:26] DEBUG JavaFX Application Thread - Игра #2: Stardew Valley (ID: 2)
+[2025-09-18 21:32:26] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-18 21:32:27] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-18 21:32:27] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-18 21:32:28] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-18 21:32:28] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-18 21:32:28] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-18 21:32:45] INFO JavaFX Application Thread - Игра добавлена в PostgreSQL, ID: 9, название: The Wither
+[2025-09-18 21:32:45] INFO JavaFX Application Thread - Игра добавлена: The Wither
+[2025-09-18 21:32:48] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-18 21:32:48] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-18 21:32:48] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-18 21:32:48] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-18 21:32:48] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:32:48] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-18 21:32:48] DEBUG JavaFX Application Thread - Игра #1: Among Us (ID: 1)
+[2025-09-18 21:32:48] DEBUG JavaFX Application Thread - Игра #2: Stardew Valley (ID: 2)
+[2025-09-18 21:32:48] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-18 21:32:49] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:32:49] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-18 21:32:49] DEBUG JavaFX Application Thread - Игра #1: Among Us (ID: 1)
+[2025-09-18 21:32:49] DEBUG JavaFX Application Thread - Игра #2: Stardew Valley (ID: 2)
+[2025-09-18 21:32:50] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:32:50] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-18 21:32:50] DEBUG JavaFX Application Thread - Игра #1: Among Us (ID: 1)
+[2025-09-18 21:32:50] DEBUG JavaFX Application Thread - Игра #2: Stardew Valley (ID: 2)
+[2025-09-18 21:32:52] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-18 21:32:52] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-18 21:32:52] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:32:52] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:32:52] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-18 21:32:53] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:32:53] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:32:58] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 1, название: The Witcher 3
+[2025-09-18 21:32:58] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:32:58] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:32:58] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 3
+[2025-09-18 21:32:58] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 1
+[2025-09-18 21:32:58] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:32:58] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:32:58] INFO JavaFX Application Thread - Сессия запланирована: The Witcher 3 на 2025-09-18
+[2025-09-18 21:33:09] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 2, название: It Takes 2
+[2025-09-18 21:33:09] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:33:09] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:33:09] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 3
+[2025-09-18 21:33:09] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 2
+[2025-09-18 21:33:09] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-18 21:33:09] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-18 21:33:09] INFO JavaFX Application Thread - Сессия запланирована: It Takes 2 на 2025-09-27
+[2025-09-18 21:33:14] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-18 21:33:14] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-18 21:33:14] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-18 21:33:14] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-18 21:33:14] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:33:14] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-18 21:33:14] DEBUG JavaFX Application Thread - Игра #1: Among Us (ID: 1)
+[2025-09-18 21:33:14] DEBUG JavaFX Application Thread - Игра #2: Stardew Valley (ID: 2)
+[2025-09-18 21:33:14] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-18 21:33:17] INFO JavaFX Application Thread - Удаление игры из JSON, ID: 1
+[2025-09-18 21:33:17] DEBUG JavaFX Application Thread - Загружено игр из JSON: 2
+[2025-09-18 21:33:17] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 1
+[2025-09-18 21:33:17] INFO JavaFX Application Thread - Игра удалена из JSON, ID: 1
+[2025-09-18 21:33:17] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-18 21:33:17] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-18 21:33:17] DEBUG JavaFX Application Thread - Игра #1: Stardew Valley (ID: 2)
+[2025-09-18 21:33:17] INFO JavaFX Application Thread - Игра удалена: Among Us
+[2025-09-22 18:34:23] INFO main - Логгер инициализирован
+[2025-09-22 18:34:23] INFO main - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 18:34:57] INFO GameManagerBot Telegram Executor - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 19:03:14] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-22 19:03:14] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-22 19:03:14] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-22 19:03:14] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 19:03:14] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-22 19:03:14] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-22 19:03:14] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-22 19:03:14] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-22 19:03:17] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-22 19:03:17] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-22 19:03:17] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-22 19:03:17] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-22 19:03:17] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-22 19:03:17] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-22 19:03:17] DEBUG JavaFX Application Thread - Игра #1: Stardew Valley (ID: 2)
+[2025-09-22 19:03:17] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-22 19:03:23] INFO JavaFX Application Thread - Обновление игры в JSON, ID: 2, название: Stardew Valley
+[2025-09-22 19:03:23] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-22 19:03:23] DEBUG JavaFX Application Thread - Игры записаны в JSON, количество: 1
+[2025-09-22 19:03:23] INFO JavaFX Application Thread - Игра обновлена в JSON, ID: 2
+[2025-09-22 19:03:23] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-22 19:03:23] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-22 19:03:23] DEBUG JavaFX Application Thread - Игра #1: Stardew Valley (ID: 2)
+[2025-09-22 19:03:25] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-22 19:03:25] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-22 19:03:26] INFO JavaFX Application Thread - Подключение к PostgreSQL установлено
+[2025-09-22 19:03:26] INFO JavaFX Application Thread - Таблица 'games' создана или уже существует
+[2025-09-22 19:03:26] INFO JavaFX Application Thread - Успешно переключено на: POSTGRES
+[2025-09-22 19:03:35] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-22 19:03:35] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 19:03:35] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-22 19:03:35] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-22 19:03:35] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-22 19:03:41] INFO JavaFX Application Thread - Добавление игры в CSV: ааа
+[2025-09-22 19:03:41] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-22 19:03:41] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-22 19:03:41] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 4
+[2025-09-22 19:03:41] INFO JavaFX Application Thread - Игра добавлена в CSV, ID: 4, название: ааа
+[2025-09-22 19:03:41] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-22 19:03:41] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-22 19:03:41] INFO JavaFX Application Thread - Игра добавлена: ааа
+[2025-09-22 19:03:45] INFO JavaFX Application Thread - Удаление игры из CSV, ID: 4
+[2025-09-22 19:03:45] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-22 19:03:45] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-22 19:03:45] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 3
+[2025-09-22 19:03:45] INFO JavaFX Application Thread - Игра удалена из CSV, ID: 4
+[2025-09-22 19:03:45] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-22 19:03:45] DEBUG JavaFX Application Thread - Загружено игр из CSV: 3
+[2025-09-22 19:03:45] INFO JavaFX Application Thread - Игра удалена: ааа
+[2025-09-22 19:03:53] INFO main - Логгер инициализирован
+[2025-09-22 19:03:53] INFO main - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 22:40:46] INFO main - Логгер инициализирован
+[2025-09-22 22:40:46] INFO main - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 22:40:55] INFO GameManagerBot Telegram Executor - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 22:40:55] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 22:40:55] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 3
+[2025-09-22 22:41:56] INFO GameManagerBot Telegram Executor - Добавление игры в CSV: Death Stranding
+[2025-09-22 22:41:56] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 22:41:56] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 3
+[2025-09-22 22:41:56] DEBUG GameManagerBot Telegram Executor - Игры сохранены в CSV, количество: 4
+[2025-09-22 22:41:56] INFO GameManagerBot Telegram Executor - Игра добавлена в CSV, ID: 4, название: Death Stranding
+[2025-09-22 22:41:56] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 22:41:56] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 22:42:17] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 22:42:17] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 22:43:42] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 22:43:42] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 22:55:04] INFO main - Логгер инициализирован
+[2025-09-22 22:55:04] INFO main - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 22:55:23] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 22:55:23] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 22:56:22] INFO main - Логгер инициализирован
+[2025-09-22 22:56:22] INFO main - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 22:56:31] INFO GameManagerBot Telegram Executor - Инициализация JSON DAO, файл: games.json
+[2025-09-22 22:56:31] DEBUG GameManagerBot Telegram Executor - JSON файл уже существует: games.json
+[2025-09-22 22:56:31] DEBUG GameManagerBot Telegram Executor - JSON файл валиден
+[2025-09-22 22:56:31] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из JSON
+[2025-09-22 22:56:31] DEBUG GameManagerBot Telegram Executor - Загружено игр из JSON: 1
+[2025-09-22 22:56:31] DEBUG GameManagerBot Telegram Executor - Игра #1: Stardew Valley (ID: 2)
+[2025-09-22 22:56:38] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 22:56:38] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 22:56:51] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 22:56:51] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:17:21] INFO main - Логгер инициализирован
+[2025-09-22 23:17:21] INFO main - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 23:17:45] INFO GameManagerBot Telegram Executor - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 23:17:45] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:17:45] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:17:48] INFO GameManagerBot Telegram Executor - Инициализация JSON DAO, файл: games.json
+[2025-09-22 23:17:48] DEBUG GameManagerBot Telegram Executor - JSON файл уже существует: games.json
+[2025-09-22 23:17:48] DEBUG GameManagerBot Telegram Executor - JSON файл валиден
+[2025-09-22 23:17:48] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из JSON
+[2025-09-22 23:17:48] DEBUG GameManagerBot Telegram Executor - Загружено игр из JSON: 1
+[2025-09-22 23:17:48] DEBUG GameManagerBot Telegram Executor - Игра #1: Stardew Valley (ID: 2)
+[2025-09-22 23:17:51] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:17:51] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:17:56] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:17:56] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:18:04] INFO GameManagerBot Telegram Executor - Подключение к PostgreSQL...
+[2025-09-22 23:18:05] INFO GameManagerBot Telegram Executor - Подключение к PostgreSQL установлено
+[2025-09-22 23:18:05] INFO GameManagerBot Telegram Executor - Таблица 'games' создана или уже существует
+[2025-09-22 23:18:14] INFO GameManagerBot Telegram Executor - Инициализация JSON DAO, файл: games.json
+[2025-09-22 23:18:14] DEBUG GameManagerBot Telegram Executor - JSON файл уже существует: games.json
+[2025-09-22 23:18:14] DEBUG GameManagerBot Telegram Executor - JSON файл валиден
+[2025-09-22 23:18:15] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из JSON
+[2025-09-22 23:18:15] DEBUG GameManagerBot Telegram Executor - Загружено игр из JSON: 1
+[2025-09-22 23:18:15] DEBUG GameManagerBot Telegram Executor - Игра #1: Stardew Valley (ID: 2)
+[2025-09-22 23:18:17] INFO GameManagerBot Telegram Executor - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 23:18:17] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:18:17] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:18:21] INFO GameManagerBot Telegram Executor - Инициализация JSON DAO, файл: games.json
+[2025-09-22 23:18:21] DEBUG GameManagerBot Telegram Executor - JSON файл уже существует: games.json
+[2025-09-22 23:18:21] DEBUG GameManagerBot Telegram Executor - JSON файл валиден
+[2025-09-22 23:18:21] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из JSON
+[2025-09-22 23:18:21] DEBUG GameManagerBot Telegram Executor - Загружено игр из JSON: 1
+[2025-09-22 23:18:21] DEBUG GameManagerBot Telegram Executor - Игра #1: Stardew Valley (ID: 2)
+[2025-09-22 23:40:01] INFO main - Логгер инициализирован
+[2025-09-22 23:40:01] INFO main - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 23:40:17] INFO GameManagerBot Telegram Executor - Инициализация CSV DAO, файл: games.csv
+[2025-09-22 23:40:17] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:40:17] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:40:20] INFO GameManagerBot Telegram Executor - Инициализация JSON DAO, файл: games.json
+[2025-09-22 23:40:20] DEBUG GameManagerBot Telegram Executor - JSON файл уже существует: games.json
+[2025-09-22 23:40:20] DEBUG GameManagerBot Telegram Executor - JSON файл валиден
+[2025-09-22 23:40:21] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из JSON
+[2025-09-22 23:40:21] DEBUG GameManagerBot Telegram Executor - Загружено игр из JSON: 1
+[2025-09-22 23:40:21] DEBUG GameManagerBot Telegram Executor - Игра #1: Stardew Valley (ID: 2)
+[2025-09-22 23:40:23] INFO GameManagerBot Telegram Executor - Подключение к PostgreSQL...
+[2025-09-22 23:40:23] INFO GameManagerBot Telegram Executor - Подключение к PostgreSQL установлено
+[2025-09-22 23:40:23] INFO GameManagerBot Telegram Executor - Таблица 'games' создана или уже существует
+[2025-09-22 23:40:28] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:40:28] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:40:42] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:40:42] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:40:50] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:40:50] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:40:53] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:40:53] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Поиск игры в CSV по ID: 1
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Поиск игры в CSV по ID: 1
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:40:55] INFO GameManagerBot Telegram Executor - Обновление игры в CSV, ID: 1, название: The Witcher 3
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Игры сохранены в CSV, количество: 4
+[2025-09-22 23:40:55] INFO GameManagerBot Telegram Executor - Игра обновлена в CSV, ID: 1
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Загрузка всех игр из CSV
+[2025-09-22 23:40:55] DEBUG GameManagerBot Telegram Executor - Загружено игр из CSV: 4
+[2025-09-24 16:11:32] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-24 16:11:32] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-24 16:11:32] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-24 16:11:32] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-24 16:11:32] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:11:32] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:11:32] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-24 16:11:32] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-24 16:11:37] INFO JavaFX Application Thread - Переключение на источник данных: JSON
+[2025-09-24 16:11:37] INFO JavaFX Application Thread - Инициализация JSON DAO, файл: games.json
+[2025-09-24 16:11:37] DEBUG JavaFX Application Thread - JSON файл уже существует: games.json
+[2025-09-24 16:11:37] DEBUG JavaFX Application Thread - JSON файл валиден
+[2025-09-24 16:11:37] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-24 16:11:37] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-24 16:11:37] DEBUG JavaFX Application Thread - Игра #1: Stardew Valley (ID: 2)
+[2025-09-24 16:11:37] INFO JavaFX Application Thread - Успешно переключено на: JSON
+[2025-09-24 16:11:38] INFO JavaFX Application Thread - Переключение на источник данных: POSTGRES
+[2025-09-24 16:11:38] INFO JavaFX Application Thread - Подключение к PostgreSQL...
+[2025-09-24 16:11:38] ERROR JavaFX Application Thread - Ошибка подключения к PostgreSQL
+org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at coursework.univer/coursework.univer.module.dao.PostgresGameDao.<init>(PostgresGameDao.java:16)
+	at coursework.univer/coursework.univer.module.dao.GameDaoFactory.createDao(GameDaoFactory.java:16)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:84)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToPostgres(GameController.java:135)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:760)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at coursework.univer/coursework.univer.module.dao.PostgresGameDao.<init>(PostgresGameDao.java:16)
+	at coursework.univer/coursework.univer.module.dao.GameDaoFactory.createDao(GameDaoFactory.java:16)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:84)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToPostgres(GameController.java:135)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+[2025-09-24 16:11:38] ERROR JavaFX Application Thread - Ошибка переключения источника данных
+java.lang.RuntimeException: Ошибка подключения к PostgreSQL
+	at coursework.univer/coursework.univer.module.dao.GameDaoFactory.createDao(GameDaoFactory.java:18)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:84)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToPostgres(GameController.java:135)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at coursework.univer/coursework.univer.module.dao.PostgresGameDao.<init>(PostgresGameDao.java:16)
+	at coursework.univer/coursework.univer.module.dao.GameDaoFactory.createDao(GameDaoFactory.java:16)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:84)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToPostgres(GameController.java:135)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:760)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at coursework.univer/coursework.univer.module.dao.PostgresGameDao.<init>(PostgresGameDao.java:16)
+	at coursework.univer/coursework.univer.module.dao.GameDaoFactory.createDao(GameDaoFactory.java:16)
+	at coursework.univer/coursework.univer.main.GameController.switchDataSource(GameController.java:84)
+	at coursework.univer/coursework.univer.main.GameController.handleSwitchToPostgres(GameController.java:135)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at javafx.base@21.0.6/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.6/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@21.0.6/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1415)
+	at javafx.controls@21.0.6/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1368)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.6/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.6/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.6/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.6/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.6/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.6/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+[2025-09-24 16:11:45] DEBUG JavaFX Application Thread - Загрузка всех игр из JSON
+[2025-09-24 16:11:45] DEBUG JavaFX Application Thread - Загружено игр из JSON: 1
+[2025-09-24 16:11:45] DEBUG JavaFX Application Thread - Игра #1: Stardew Valley (ID: 2)
+[2025-09-24 16:11:48] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-24 16:11:48] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-24 16:11:48] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:11:48] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:11:48] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-24 16:11:48] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:11:48] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:11:56] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:11:56] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:11:58] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:11:58] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:12:00] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:12:00] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:12:18] INFO JavaFX Application Thread - Обновление игры в CSV, ID: 3, название: Among US
+[2025-09-24 16:12:18] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:12:18] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:12:18] DEBUG JavaFX Application Thread - Игры сохранены в CSV, количество: 4
+[2025-09-24 16:12:18] INFO JavaFX Application Thread - Игра обновлена в CSV, ID: 3
+[2025-09-24 16:12:18] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:12:18] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:12:18] INFO JavaFX Application Thread - Сессия запланирована: Among US на 2025-09-24
+[2025-09-24 16:17:26] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-24 16:17:26] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-24 16:17:26] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-24 16:17:26] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-24 16:17:26] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:17:26] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:17:26] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-24 16:17:26] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-24 16:23:55] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-24 16:23:55] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-24 16:23:55] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-24 16:23:55] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-24 16:23:55] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:23:55] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:23:55] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-24 16:23:55] INFO JavaFX Application Thread - Контроллер успешно инициализирован
+[2025-09-24 16:23:59] INFO JavaFX Application Thread - Логгер инициализирован
+[2025-09-24 16:23:59] INFO JavaFX Application Thread - Инициализация GameController
+[2025-09-24 16:23:59] INFO JavaFX Application Thread - Переключение на источник данных: CSV
+[2025-09-24 16:23:59] INFO JavaFX Application Thread - Инициализация CSV DAO, файл: games.csv
+[2025-09-24 16:23:59] DEBUG JavaFX Application Thread - Загрузка всех игр из CSV
+[2025-09-24 16:24:00] DEBUG JavaFX Application Thread - Загружено игр из CSV: 4
+[2025-09-24 16:24:00] INFO JavaFX Application Thread - Успешно переключено на: CSV
+[2025-09-24 16:24:00] INFO JavaFX Application Thread - Контроллер успешно инициализирован

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="coursework.univer.controller.AcademicController"
+      spacing="10">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Фильтр -->
+    <HBox spacing="5">
+        <Label text="Фильтр:"/>
+        <TextField fx:id="filterField" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <!-- Кнопки управления -->
+    <HBox spacing="5">
+        <Button fx:id="addButton" text="Добавить"/>
+        <Button fx:id="editButton" text="Редактировать"/>
+        <Button fx:id="deleteButton" text="Удалить"/>
+        <Button fx:id="gpaButton" text="GPA по всем предметам"/>
+        <Button fx:id="forecastButton" text="Прогноз GPA по всем предметам"/>
+    </HBox>
+
+    <HBox spacing="5">
+        <Button fx:id="importButton" text="Импорт CSV"/>
+        <Button fx:id="exportButton" text="Экспорт CSV"/>
+        <Button fx:id="loadAPIButton" text="Загрузить из API"/>
+        <Button fx:id="saveFirebaseButton" text="Сохранить в Firebase"/>
+        <Button fx:id="loadFirebaseButton" text="Загрузить из Firebase"/>
+        <Button fx:id="recommendButton" text="Рекомендации"/>
+    </HBox>
+
+    <!-- Выбор типа графика -->
+    <HBox spacing="5">
+        <Label text="График:"/>
+        <ComboBox fx:id="chartTypeBox"/>
+    </HBox>
+
+    <!-- Таблица дисциплин -->
+    <TableView fx:id="table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Название" prefWidth="150"/>
+            <TableColumn fx:id="semesterColumn" text="Семестр" prefWidth="80"/>
+            <TableColumn fx:id="creditsColumn" text="Кредиты" prefWidth="80"/>
+            <TableColumn fx:id="teacherColumn" text="Преподаватель" prefWidth="120"/>
+            <TableColumn fx:id="controlColumn" text="Тип контроля" prefWidth="100"/>
+            <TableColumn fx:id="gradeColumn" text="Оценка" prefWidth="80"/>
+            <TableColumn fx:id="statusColumn" text="Статус" prefWidth="100"/>
+            <TableColumn fx:id="dateColumn" text="Дата" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- График -->
+    <BarChart fx:id="chart" VBox.vgrow="ALWAYS">
+        <xAxis>
+            <CategoryAxis label="Дисциплина"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Значение"/>
+        </yAxis>
+    </BarChart>
+
+</VBox>
